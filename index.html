@@ -1,29 +1,76 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moje portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1e1e2f, #27293d);
+      color: #f5f5f5;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+      color: #ccc;
+    }
+
+    .projects {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .project {
+      background-color: #33354d;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: 0.3s ease;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .project:hover {
+      background-color: #4a4e75;
+      transform: translateY(-5px);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #999;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Moje portfolio</h1>
-    <p class="intro">Vítej na mém portfoliu! Najdeš tu projekty, které jsem vytvořil a na kterých se učím programovat.</p>
-  </header>
+  <h1>Moje portfolio</h1>
+  <p>Vítej na mé hlavní stránce! Zde najdeš odkazy na mé projekty, aplikace a další zajímavé věci, které tvořím.</p>
 
   <div class="projects">
     <a href="html/index.html" class="project">🧙‍♂️ Dungeons & Dragons – projekt</a>
-    <!-- Můžeš přidat další projekty sem -->
-  </div>
-
-  <div class="github-link">
-    <p>📂 Podívej se i na můj kód na GitHubu:</p>
-    <a href="https://github.com/TVOJEGITHUBJMENO" target="_blank">github.com/TVOJEGITHUBJMENO</a>
   </div>
 
   <footer>
-    © 2025 Tvoje jméno
+    © 2025 Ondřej Dostál
   </footer>
 </body>
 </html>
