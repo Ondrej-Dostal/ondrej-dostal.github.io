@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vyhledávač</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #1b1f38, #23284d);
+      color: #fff;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      background: #2b2f50;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    input[type="text"] {
+      width: 300px;
+      max-width: 80vw;
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    button {
+      padding: 10px 18px;
+      border-radius: 6px;
+      border: none;
+      background: #5b6cf0;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #7482ff;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 10px;
+      text-align: center;
+      width: 100%;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔍 Můj vyhledávač</h1>
+  <form onsubmit="return searchGoogle();">
+    <input id="query" type="text" placeholder="Zadej, co chceš vyhledat..." required />
+    <button type="submit">Hledat</button>
+  </form>
+
+  <footer>© 2025 Ondřej Dostál</footer>
+
+  <script>
+    function searchGoogle() {
+      const query = document.getElementById('query').value.trim();
+      if (!query) return false;
+      const url = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+      window.open(url, '_blank'); // otevře výsledky v nové záložce
+      return false; // zabrání obnovení stránky
+    }
+  </script>
+</body>
+</html>
